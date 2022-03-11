@@ -2,4 +2,43 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Navigation Styling */
+body{
+    max-width: 1440px;
+    height: 100vh;
+    margin: 20px 5rem;
+}
+.nav-container{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+.nav-left{
+    width: 40rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+    width: 23rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-right{
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    
+}
+.profile{
+    width: 40px;
+    
 }
