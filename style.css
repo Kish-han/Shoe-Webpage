@@ -64,6 +64,7 @@ body{
 }
 .profile{
     width: 40px;
+    
 }
 .menu-toggle .bar{
     width: 25px;
@@ -235,39 +236,40 @@ img{
 
 /* Mobile Screen */
 
-@media screen and (max-width: 785px) {
+@media screen and (max-width: 768px) {
     /* Navigation bar */
+    body{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+
     .nav-container{
         position: relative;
         width: 100%;
         margin: 0;
         padding: 0;
     }
-    body{
-        margin: 0px;
-        
-    }
+
     .nav-logo{
-        margin-left: 5rem;
+        margin-left: 2rem;
     }
     .nav-links{
-        background-color: #ccc;
+        background-color: hsl(25, 100%, 94%);
         color: black;
         display: flex;
         flex-direction: column;
         position: absolute;
         margin: 0px;
-        width: 100%;
+        width: 100vw;
         height: 50vh;
         padding: 5px;
         border: 2px;
-        top: 80px;
+        top: 95%;
         left: -100%;
-        opacity: 0.6; 
+        opacity: 0.9;
         transition: all 0.5s ease;
         text-align: center;
-        font-size: 30px;
-        font-family: 'Kumbh Sans', sans-serif;
     }
     .nav-links.active{
         left: 0;
@@ -279,13 +281,20 @@ img{
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0px;
+        margin: 0px;
+        font-size: 35px;
+        font-weight: 500;
+        font-family: 'Kumbh Sans', sans-serif;
+        transition: transform .3s
     }
     #links:hover{
         cursor: pointer;
         color: white;
-        border-radius: 10px;
+        border-radius: 5px;
+        opacity: 1;
         background-color: hsl(26, 100%, 55%);
-        transition:all .5s ease-in-out;
+        transform: scale(1.1);
     }
     .menu-toggle{
         position: absolute;
@@ -314,6 +323,82 @@ img{
     
 
     /* Main Container */
-    
+    .main-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-left-part{
+        height: 50%;
+        width: 100%;
+        margin: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-img-holder{
+        height: 100%;
+        margin: 0px;
+    }
+    .main-img{
+        margin: 0px;
+        border-radius: 0px;
+        width: 100vw;
+        height: 100%;
+    }
+    .img-thumbnail{
+        display: none;
+    }
+    .main-right-part{
+        height: 50%;
+        width: 100%;
+        padding: 0px;
+        margin-top: 1.5rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    .main-right-part h5{
+        margin: 0px;
+        font-weight: 600;
+    }
+    .main-right-part h2{
+        font-size: 28px;
+        font-weight: 600;
+    }
+    .main-right-part p{
+        display: inline-table;
+        font-size: 15px;
+        margin-right: 5%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: rgb(10, 10, 10);
+    }
+    #oldprice{
+        position: relative;
+        left: 70%;
+        bottom: 10%;
+        font-size: 16px;
+        font-weight: 500;
+        color: rgb(160, 151, 151);
+    }
+    .no-items{
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .add-item{
+        width: 80%;
+        margin-bottom: 1rem;
+        
+        margin-right:0px ;
+    }
+    .addtocrate{
+        width: 80%;
+        align-self: center;
+    }
+
 }
 
