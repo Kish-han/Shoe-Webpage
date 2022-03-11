@@ -10,10 +10,14 @@
 body{
     max-width: 1440px;
     height: 100vh;
-    margin: 20px 5rem;
+    margin:0px 5rem;
+    align-items: center;
+    
 }
 .nav-container{
-    height: 10vh;
+    height: 10%;
+    padding: 5px;
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,11 +38,92 @@ body{
     width: 10rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    
-    
+    justify-content: space-around;  
 }
 .profile{
     width: 40px;
+}
+.menu-toggle .bar{
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color:  hsl(217, 9%, 45%);
+}
+
+@media screen and (max-width: 785px) {
+    .nav-container{
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        margin: 0px;
+        
+    }
+    .nav-logo{
+        margin-left: 5rem;
+    }
+    .nav-links{
+        background-color: #ccc;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: 50vh;
+        padding: 5px;
+        border: 2px;
+        top: 80px;
+        left: -100%;
+        opacity: 0.6; 
+        transition: all 0.5s ease;
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+    .nav-links.active{
+        left: 0;
+        transition: all 0.5s ease;
+    }
+    #links{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #links:hover{
+        cursor: pointer;
+        color: white;
+        border-radius: 10px;
+        background-color: hsl(26, 100%, 55%);
+        transition:all .5s ease-in-out;
+    }
+    .menu-toggle{
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        transform: translate(5%, 20%);
+        
+    }
+    .menu-toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+    #mobile-menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+        background-color:  hsl(26, 100%, 55%);
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+        background-color:  hsl(26, 100%, 55%);
+    }
     
 }
