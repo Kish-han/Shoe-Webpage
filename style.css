@@ -122,14 +122,14 @@ img{
 }
 
 .thumbnail:hover{
+    width: 5rem;
     border: 2px solid hsl(26, 100%, 55%);
     transform: scale(1.1);
-}
-.thumbnail :hover{
     cursor: pointer;
-    background-color: #ccc;
     opacity: 0.6;
+    border-radius: 11px;
 }
+
 
 /* Right-section */
 .main-right-part{
@@ -239,7 +239,7 @@ img{
     width: 90%;
     height: 100vh;
     background: rgba(0,0,0,0.4);
-    /* left: -100%; */
+    left: -1000%;
     position: absolute;
     top: 0%;
     transition: all 0.3s ease-in-out;
@@ -260,7 +260,7 @@ img{
 }
 .close-icon svg{
     width: 1.5%;
-    fill: rgb(34, 33, 33);
+    fill: rgb(255, 255, 255);
     transition: transform .3s;
 }
 
@@ -292,7 +292,7 @@ img{
 
 .prv-icon:hover, .nxt-icon:hover{
     transform: scale(1.3);
-    fill: orange;
+    fill: hsl(26, 100%, 55%);
 }
 
 .prv-icon{
@@ -308,7 +308,7 @@ img{
 .thumbnail-img{
     display: flex;
     justify-content: space-evenly;
-    margin-top: 2rem;
+    margin-top: 2px;
     padding: 5px 0px 5px 0px;
     width: 25rem;
     height: 6rem;
@@ -490,6 +490,8 @@ img{
         width: 80%;
         align-self: center;
     }
-
+    .img-viwer{
+        display: none;
+    }
 }
 
