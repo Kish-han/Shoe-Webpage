@@ -103,6 +103,7 @@ img{
 }
 .main-img{
     width: 25rem;
+    cursor: pointer;
 }
 .img-thumbnail{
     display: flex;
@@ -346,6 +347,9 @@ img{
         border-radius: 0px;
         width: 100vw;
         height: 100%;
+    }
+    .main-img:hover{
+        cursor: pointer;
     }
     .img-thumbnail{
         display: none;
