@@ -7,6 +7,11 @@ const thumbnail2 = document.getElementById('thumbnail-2')
 const thumbnail3 = document.getElementById('thumbnail-3') 
 const thumbnail4 = document.getElementById('thumbnail-4') 
 
+// Image Viwer (Line 32 - Line 35)
+const imgViwer = document.querySelector('.img-viwer')
+const closeBtn = document.querySelector('.close-icon')
+
+
 // Navigation Menu
 menu.addEventListener('click', function () {
     menu.classList.toggle('is-active')
@@ -24,4 +29,13 @@ thumbnail3.addEventListener('click', function () {
 })
 thumbnail4.addEventListener('click', function () {
     mainImg.src="images/image-product-4.jpg"
+})
+
+// Image Viwer
+mainImg.addEventListener('click', function () {
+    imgViwer.classList.add('img-active')
+})
+
+closeBtn.addEventListener('click', function () {
+    imgViwer.classList.remove('img-active')   
 })
